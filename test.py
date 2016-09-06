@@ -14,8 +14,8 @@ class TaxiMeterTestCase(unittest.TestCase):
 
     # @unittest.skip('')
     def test_mile_lt_3_normal_time(self):
-        self.taxi_meter.start('6:00')
-        self.taxi_meter.receive('7:00', 2)
+        self.taxi_meter.start(6.0)
+        self.taxi_meter.receive(7.0, 2)
         self.assertEqual(self.taxi_meter.cash, 14)
 
 
