@@ -12,7 +12,9 @@ class TaxiMeter(object):
 
     def receive(self, current_time, miles):
         print "miles: {0}".format(miles)
-        if miles > 3:
+        if miles > 10:
+            self.cash = 14 + 7 * 2.4 + (miles - 10) * 3.6
+        elif miles > 3:
             self.cash = 14 + (miles - 3) * 2.4
         else:
             self.cash = 14
