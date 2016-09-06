@@ -19,6 +19,11 @@ class TaxiMeterTestCase(unittest.TestCase):
         self.taxi_meter.receive(7.0, 2)
         self.assertEqual(self.taxi_meter.cash, 14)
 
+    def test_mile_mt_3_lt_10_normal_time(self):
+        self.taxi_meter.start(6.0)
+        self.taxi_meter.receive(8.0, 4)
+        self.assertEqual(self.taxi_meter.cash, 16.4)
+
 
 if __name__ == '__main__':
     unittest.main()
