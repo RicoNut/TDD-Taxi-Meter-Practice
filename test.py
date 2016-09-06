@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+from taxi_meter import TaxiMeter
 
 
 class TaxiMeterTestCase(unittest.TestCase):
